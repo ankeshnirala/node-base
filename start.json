@@ -1,0 +1,11 @@
+{
+    "apps": [
+        {
+            "name": "campaign/service",
+            "script": "npm start",
+            "autostart": true,
+            "watch": false,
+            "restart_delay": 0
+        }
+    ]
+}
