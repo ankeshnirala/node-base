@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  app:
+   build:
+    context: .
+    dockerfile: Dockerfile
+   image: nodeapp
+   container_name: nodeapp
+   env_file: config.env
+   environment:
+    - NODE_ENV=dev
+   ports:
+     - 8000:8000
+   volumes:
+     - .:/app
+   networks: 
+     - app-network
+   command: npm start
+networks:
+ app-network:
+  driver: bridge
+volumes:
+  node_modules:
